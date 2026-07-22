@@ -18,8 +18,6 @@ const food = {
   },
 };
 
-const tree = document.querySelector('#tree');
-
 function createTree(element, data) {
   const ul = document.createElement('ul');
 
@@ -37,9 +35,9 @@ function createTree(element, data) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const root = document.querySelector('#tree');
+  const root = document.createElement('div');
 
+  root.id = 'tree';
+  document.body.appendChild(root);
   createTree(root, food);
 });
-
-createTree(tree, food);
