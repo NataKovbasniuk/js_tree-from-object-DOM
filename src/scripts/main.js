@@ -36,4 +36,10 @@ function createTree(element, data) {
   element.appendChild(ul);
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  const root = document.querySelector('#tree');
+
+  createTree(root, food);
+});
+
 createTree(tree, food);
